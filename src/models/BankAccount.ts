@@ -27,4 +27,22 @@ export default class BankAccount {
     get balance (){
         return this._balance
     }
+
+    getAccountInfo(){
+        return `Number: ${this._number}\nBranch: ${this._branch}`
+    }
+
+    set number(number: string) {
+        if(/^\d{5}-\d{1}$/.test(number)){
+        this._number = number}
+    else{
+        console.log('invalid number')
+    }}
+    set branch(branch: string) {
+        if(/^\d{4}-\d{1}$/.test(branch)){
+        this._branch = branch}
+    else{
+        console.log('invalid branch')
+    }}
+
 }
