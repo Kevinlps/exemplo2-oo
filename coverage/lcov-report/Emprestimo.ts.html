@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.42% </span>
+                <span class="strong">48.27% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>15/21</span>
+                <span class='fraction'>14/29</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.42% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/7</span>
+                <span class='fraction'>5/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.42% </span>
+                <span class="strong">48.27% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>15/21</span>
+                <span class='fraction'>14/29</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -112,7 +112,19 @@
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -121,8 +133,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -150,6 +160,20 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -163,7 +187,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export default class Emprestimo {
     private _valor : number
-    private _valorReal : number
     private _valorPrestacao : number
     private _quantidadeParcelas : number
     private _standard : number
@@ -172,7 +195,6 @@
     private _montante : number 
     constructor() {
         this._valor= 0
-        this._valorReal = 0
         this._valorPrestacao = 0
         this._quantidadeParcelas = 0
         this._standard = 2.5
@@ -181,7 +203,7 @@
         this._montante = 0
     }
 &nbsp;
-    ValorDoEmprestimo(value:number){
+    valorDoEmprestimo(value:number){
         if(value&gt;0){
             this._valor += value
         }else<span class="missing-if-branch" title="else path not taken" >E</span>{
@@ -193,13 +215,27 @@
             this._quantidadeParcelas += value
         }
     }
-<span class="fstat-no" title="function not covered" >    ValorRealEmprestimo(</span>value:number){
+<span class="fstat-no" title="function not covered" >    valorRealEmprestimoPlatinum(</span>value:number){
         const platinum = <span class="cstat-no" title="statement not covered" >this._platinum</span>
         const valor = <span class="cstat-no" title="statement not covered" >this.valor</span>
         const parcela = <span class="cstat-no" title="statement not covered" >this.quantidadedeparcelas</span>
 <span class="cstat-no" title="statement not covered" >        this._montante = valor *(1+((platinum/100)*parcela))    </span>
     }
-&nbsp;
+<span class="fstat-no" title="function not covered" >    valorRealEmprestimoStandard(</span>value:number){
+        const standard = <span class="cstat-no" title="statement not covered" >this._standard</span>
+        const valor = <span class="cstat-no" title="statement not covered" >this.valor</span>
+        const parcela = <span class="cstat-no" title="statement not covered" >this.quantidadedeparcelas</span>
+<span class="cstat-no" title="statement not covered" >        this._montante = valor *(1+((standard/100)*parcela))    </span>
+    }
+<span class="fstat-no" title="function not covered" >    valorRealEmprestimoGold(</span>value:number){
+        const gold = <span class="cstat-no" title="statement not covered" >this._gold</span>
+        const valor = <span class="cstat-no" title="statement not covered" >this.valor</span>
+        const parcela = <span class="cstat-no" title="statement not covered" >this.quantidadedeparcelas</span>
+<span class="cstat-no" title="statement not covered" >        this._montante = valor *(1+((gold/100)*parcela))    </span>
+    }
+<span class="fstat-no" title="function not covered" >    prestacao(</span>value:number){
+<span class="cstat-no" title="statement not covered" >        this._valorPrestacao = this.montante / this.quantidadedeparcelas</span>
+    }
 &nbsp;
     get valor (){
         return this._valor
@@ -217,7 +253,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-08-24T02:17:52.982Z
+                at 2022-08-24T02:37:56.439Z
             </div>
         <script src="prettify.js"></script>
         <script>

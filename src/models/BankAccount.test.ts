@@ -55,9 +55,14 @@ describe('Test over account basic info (number and branch)', () => {
         account.number = '121212'
         expect(account.getAccountInfo()).toBe('Number: 00000-0\nBranch: 0000-0')
     })
+
+
+
+
+
     test('deposito',()=>{
         const dinheiro = new Emprestimo
-        dinheiro.ValorDoEmprestimo(100000)
+        dinheiro.valorDoEmprestimo(100000)
         expect(dinheiro.valor).toBe(100000)
     })
     test('parcela',()=>{
