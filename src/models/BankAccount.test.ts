@@ -1,5 +1,5 @@
 import BankAccount from "./BankAccount"
-import Emprestimo from "./Emprestimo"
+//import Emprestimo from "./Emprestimo"
 describe('Tests over the account balance', () => {
     test('It should apply 0 to balance when account is created', () =>{
         const account = new BankAccount()
@@ -60,7 +60,7 @@ describe('Test over account basic info (number and branch)', () => {
 
 
 
-    test('deposito',()=>{
+   /* test('deposito',()=>{
         const dinheiro = new Emprestimo
         dinheiro.valorDoEmprestimo(100000)
         expect(dinheiro.valor).toBe(100000)
@@ -69,5 +69,5 @@ describe('Test over account basic info (number and branch)', () => {
         const dinheiro = new Emprestimo
         dinheiro.quantidadeDeParcelas(100)
         expect(dinheiro.quantidadedeparcelas).toBe(100)
-    })
+    })*/
 })

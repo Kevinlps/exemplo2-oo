@@ -1,3 +1,5 @@
+/*    prova-emprestimo
+
 export default class Emprestimo {
     private _valor : number
     private _valorPrestacao : number
@@ -59,4 +61,35 @@ export default class Emprestimo {
     get montante (){
         return this._montante
     }
-}
+} resposta da prova: */
+
+import TipoCliente from "../enums/TipoCliente";
+import CondicoesEnprestimo from "./CondicoesEmprestimo";
+
+export default class Emprestimo {
+    private _tipoCliente: TipoCliente
+    private _valor : number
+    private _quantidadePrestacoes: number
+
+    constructor(tipoCliente:TipoCliente , valor:number, quantidadePrestacoes:number){
+        this._tipoCliente = tipoCliente
+        this._valor = valor
+        this._quantidadePrestacoes = quantidadePrestacoes
+    }
+
+    simularValorReal(){
+        const condicoes = new CondicoesEnprestimo(this._tipoCliente)
+        if(this._valor <= condicoes.limite && this._quantidadePrestacoes <= condicoes.quantidadeMaximaPrestacoes){
+            let valorReal = condicoes.taxaJuros / 100
+            valorReal *= this._quantidadePrestacoes
+            valorReal += 1
+            valorReal *= this._valor
+            return valorReal
+        }
+        return 0
+
+    }
+    simularValorPretacao(){
+        return this.simularValorReal() / this._quantidadePrestacoes
+    }
+} 
